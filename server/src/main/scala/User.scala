@@ -25,7 +25,7 @@ object User {
     name:   String,
     parent: ParentActor,
     known:  HashMap[String, UserActor], // TODO use something like lru?
-    queue:  Queue[Send] // TODO create timeout to keep annoying for queue
+    queue:  Queue[Send] // TODO think about stale queue items
   )
 
   private def user(inf: UserInfo): Behavior[Command] =

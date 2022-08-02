@@ -30,6 +30,7 @@ object Driver extends App {
         system ! TlakSystem.TellSend(from, to, body)
       }
       case "e" => exit = true
+      case _ => ()
     }
   }
 }
